@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+}
+.block{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    background: #758989;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.user{
+    width: 40%;
+}

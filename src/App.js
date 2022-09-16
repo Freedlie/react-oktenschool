@@ -1,14 +1,13 @@
 import './App.css';
-import Simpsons from "./components/Simpsons/Simpsons";
-import Characters from "./components/task2/Characters/Characters";
+import Users from "./components/users/Users";
+import SpaceItems from "./components/spaceItems/SpaceItems";
+import './components/user/User.css'
 
 function App() {
   return (
       <div>
-          <Simpsons/>
-          <div className="area"></div>
-        <Characters/>
-
+        <Users/>
+          <SpaceItems/>
       </div>
 
   )
