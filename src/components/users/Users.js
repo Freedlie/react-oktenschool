@@ -1,51 +1,43 @@
 import React, {useEffect, useState} from 'react';
+
 import {getUsers} from '../../services/api.users.axios'
 import User from "../user/User";
+import Userinfo from "../userInfo/Userinfo";
 
 const Users = () => {
+    let infoId = 0;
+
     let [users, setUsers] = useState([]);
     let [info, setInfo] = useState(null);
 
-
     useEffect(() =>{
-
         getUsers()
             .then(value => {
                 setUsers(value.data)
             });
     },[])
 
-
     const click = (obj) =>{
         setInfo(obj);
+        infoId++;
     }
 
     return (
         <div>
             <div>
-                <p>
-                    email:
-                    {info?.email}
-                    <br/>
-                    phone:
-                    {info?.phone}
-                    <br/>
-                    address:
-                    <br/>
-                    street:{info?.address.street}
-                    <br/>
-                    city:{info?.address.city}
-                </p>
+                <Userinfo
+                        info ={info}
+                        key ={infoId}/>
             </div>
             <div className="block">
                 {users.map((user, index) =>
-                (<User
-                    key = {index}
-                    item = {user}
-                    click = {click}/>))
-            }
+                    (<User
+                        key = {index}
+                        item = {user}
+                        click = {click}
+                        info = {info}/>))
+                }
             </div>
-
         </div>
     );
 };
