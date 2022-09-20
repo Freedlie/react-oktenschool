@@ -2,15 +2,11 @@ import React, {useEffect, useState} from 'react';
 
 import {getUsers} from "../../services/api.info.axios";
 import User from "../user/User";
-import Posts from "../posts/Posts";
 
-const Users = () => {
+const Users = (props) => {
+    let {getPostsById} = props;
+
     let [users, setUsers] = useState([]);
-    let [posts, setPosts] = useState([]);
-
-    let click = (posts)=>{
-        setPosts(posts);
-    }
 
     useEffect(()=>{
         getUsers()
@@ -26,14 +22,7 @@ const Users = () => {
                     <User
                         key = {index}
                         user = {user}
-                        click = {click}/>
-                ))}
-            </div>
-            <div>
-                {posts.map((post, index) =>(
-                    <Posts
-                        key = {index}
-                        post = {post}/>
+                        getPostsById ={getPostsById}/>
                 ))}
             </div>
         </div>

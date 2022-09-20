@@ -1,11 +1,27 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+
+import {getPosts} from "../../services/api.info.axios";
+import Post from "../post/Post";
 
 const Posts = (props) => {
-    let {post} = props;
+    let {postsId} = props;
+
+    let [posts, setPosts] = useState([]);
+
+    useEffect(() =>{
+        getPosts(postsId)
+            .then(value => {
+                setPosts(value.data);
+            })
+    }, [postsId])
+
     return (
         <div>
-            <h3>{post.title}</h3>
-            <p>{post.body}</p>
+            {posts.map((post, index) =>(
+                <Post
+                    key = {index}
+                    post = {post}/>
+            ))}
         </div>
     );
 };
