@@ -1,8 +1,13 @@
-.h2{
-  text-align: center;
-    font-size: 40px;
+.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.area{
-  height: 300px;
-  background: aliceblue;
+
+.cat{
+  background: lavender;
+}
+
+.dog{
+  background: lavender;
 }

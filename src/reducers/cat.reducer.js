@@ -1,22 +1,26 @@
 import {useReducer} from "react";
-import {ADD} from "./dog.reducer";
+import {ADD, DELETE} from "./count.actions";
 
-
-const state = (initialValue) =>{
-    return {cats:initialValue};
-}
+let id = 0 ;
 
 const reducer = (state, action) =>{
+    const {payload} = action;
 // eslint-disable-next-line default-case
-switch (action.type){
-    case ADD:
-        return {cats: state.cats + 1}
-}
+    switch (action.type){
+        case ADD:
+            id++;
+            return {...state, cats: [...state.cats, {name: payload, id: id}]};
+        case DELETE:
+            const index = state.cats.findIndex(n => n.id === id);
+            if (index !== -1) {
+               return {...state, cats:[state.cats.splice(index, 1)]};
+            }
+    }
+    return {...state}
 }
 
-// eslint-disable-next-line react-hooks/rules-of-hooks
-const catReducer =()=> useReducer(reducer,[],state);
+const useCatReducer =()=> useReducer(reducer,{cats:[]});
 
 export {
-    catReducer
+    useCatReducer,
 }
