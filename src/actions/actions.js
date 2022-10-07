@@ -1,0 +1,9 @@
+const ADD_POSTS = 'ADD_POSTS';
+const ADD_USERS = 'ADD_USERS';
+const ADD_COMMENTS = 'ADD_COMMENTS';
+
+export {
+    ADD_POSTS,
+    ADD_USERS,
+    ADD_COMMENTS
+}
