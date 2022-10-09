@@ -1,22 +1,29 @@
 import React, {useReducer} from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import {createStore} from "redux";
-import {ADD_USERS} from "./actions/actions";
+
+import {ADD_COMMENTS, ADD_POSTS, ADD_USERS} from "./actions/actions";
+import './index.css';
+import App from './App';
 
 
-const store = createStore((state = {users:[]}, action)=>{
-    console.log(action);
+const store = createStore((state = {users:[], posts:[], comments:[]}, action)=>{
     switch (action.type){
-    case ADD_USERS:
-        console.log(state)
-        return {
-            ...state, users: action.payload
-        }
+        case ADD_USERS:
+            return {
+                ...state, users: action.payload
+            }
+        case ADD_POSTS:
+            return {
+                ...state, posts: action.payload
+            }
+        case ADD_COMMENTS:
+            return {
+                ...state, comments: action.payload
+            }
     default:
 }
 })
