@@ -14,7 +14,10 @@
     "joi" : "^17.6.1",
     "react-hook-form": "^7.36.1",
     "@hookform/resolvers": "^2.9.8",
-    "redux": "^4.2.0"
+    "redux": "^4.2.0",
+    "react-redux": "^8.0.4",
+    "@reduxjs/toolkit": "^1.8.6"
+
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
