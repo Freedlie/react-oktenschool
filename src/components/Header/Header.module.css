@@ -1,0 +1,8 @@
+.Header{
+    display: flex;
+    justify-content: flex-end;
+    background: lavender;
+    color: grey;
+    height: 50px;
+    align-items: center;
+}
