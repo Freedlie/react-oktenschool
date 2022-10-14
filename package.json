@@ -1,52 +1,24 @@
 {
   "name": "react-oktenschool",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
-    "axios" : "^0.27.2",
-    "joi" : "^17.6.1",
-    "react-hook-form": "^7.36.1",
-    "@hookform/resolvers": "^2.9.8",
-    "redux": "^4.2.0",
-    "react-redux": "^8.0.4",
-    "@reduxjs/toolkit": "^1.8.6"
-
-  },
-  "devDependencies": {
-    "@types/axios": "^0.14.0",
-    "@types/react": "^18.0.20",
-    "@types/react-dom": "^18.0.6"
-
-  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "axios": "0.27.2",
+    "node-typescript": "^0.1.3",
+    "typescript": "^4.8.4"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Freedlie/react-oktenschool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Freedlie/react-oktenschool/issues"
+  },
+  "homepage": "https://github.com/Freedlie/react-oktenschool#readme"
 }
